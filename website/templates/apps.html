@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Apps | Erik Rahem
+{% endblock %}
+
+{% block style %}
+    .mx-6 {
+        margin-left: 28rem !important;
+        margin-right: 28rem !important;
+    }
+
+    .py-6 {
+        margin-top: 5rem !important;
+    }
+
+    img {
+        object-fit: cover;
+        transition: .5s;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      
+      a:hover {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      
+      
+  .card {
+    cursor: pointer;
+    border-style: solid;
+    border-color: #0080FF;
+    color: #0080FF;
+    background-color: black;
+    transition: .5s;
+  }
+
+  .card:hover {
+    color: white;
+    background-color: #0080FF;
+  }
+
+  .card:hover img {
+    opacity: 0.5;
+  }
+
+  .card:hover rect {
+    fill: #0080FF;
+  }
+
+  .visz rect {
+    transition: .5s;
+  }
+
+  .visz:hover rect {
+    fill: white;
+  }
+{% endblock %}
+
+{% block content %}
+<div class="album py-6">
+    <div class="container">
+      <div class="card-deck">
+        <div class="card text-center mx-6 texthv">
+          <a href="/apps/journal">
+            <div class="visz imghv">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/journal-1.png" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Journal</h5>
+              <p class="card-text"><br>Thinking assistant app.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    count = document.getElementsByClassName('imghv').length;  
+
+    for (let i = 0; i < count; i++) {
+
+
+      document.getElementsByClassName("imghv")[i].onmouseover = function() {mouseOverImage()};
+
+      document.getElementsByClassName("imghv")[i].onmouseout = function() {mouseOutImage()};
+
+
+      function mouseOverImage() {
+        document.getElementsByClassName("texthv")[i].style.color = "black";
+      }
+
+      function mouseOutImage() {
+        document.getElementsByClassName("texthv")[i].style.color = "";
+      }
+    }
+  </script>
+
+
+{% endblock %}

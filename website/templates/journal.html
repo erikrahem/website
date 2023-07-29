@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Journal | Erik Rahem{% endblock %}
+
+{% block style %}
+.pbody {
+    width: 50%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: auto;
+    white-space: pre-wrap;
+}
+
+b, h1 {
+    color: #0080FF;
+    transition: .5s;
+}
+
+b:hover, h1:hover {
+  color:white;
+}    
+{% endblock %}
+
+{% block content %}
+<img src="../static/journal-1.png" id="spaceHeight" style="width:25%; height:auto; display:block; margin: -1px auto; border: 1px solid #0080FF;">
+
+<div style="text-align: center; margin-top: 1%;">
+    <span>
+<h1>Journal</h1>
+An app.
+    </span>
+</div>
+
+<div class="pbody">
+    <span>
+<b>2D game</b>
+It requires a lot of sprites that I either have to learn drawing myself or work with someone for.
+
+Satisfying visual violence with dark cartoonish blood effects like in Seal Hunter. It's a fun grinding play.
+
+I have to explore the domain of story- and character-writing.
+</span>
+</div>
+{% endblock %}

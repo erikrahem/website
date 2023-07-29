@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+
+{% block title %}Articles | Erik Rahem{% endblock %}
+
+{% block style %}
+    body {
+    }
+  
+  img {
+    object-fit: cover;
+    transition: .5s;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  
+  a:hover {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .card {
+    cursor: pointer;
+    border-style: solid;
+    border-color: #0080FF;
+    color: #0080FF;
+    background-color: black;
+    transition: .5s;
+  }
+
+  .card:hover {
+    color: white;
+    background-color: #0080FF;
+  }
+
+  .card:hover img {
+    opacity: 0.5;
+  }
+
+  .card:hover rect {
+    fill:#0080FF;
+  }
+
+  .atest rect {
+    transition: .5s;
+  }
+
+  .atest:hover rect {
+    fill: white;
+  }
+  
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="album py-5">
+    <div class="container">
+      <div class="card-deck">
+        <div class="card text-center mover">
+          <a href="/careerplanner">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/stem.bmp" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Careerplanner</h5>
+              <p class="card-text"><br>Article #12</p>
+            </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+          <a href="/game-design">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/fundamentals-of-game-design.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Game design</h5>
+              <p class="card-text"><br>Article #11</p>
+            </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+          <a href="/animelist">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/attack-on-titan.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Animelist</h5>
+              <p class="card-text"><br>Article #10</p>
+            </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+          <a href="/articles/game-development">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/dow-orks.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Game development</h5>
+              <p class="card-text"><br>Getting started</p>
+            </div>
+            </a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <div class="card-deck">
+        <div class="card text-center mover">
+          <a href="/game-list">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/tibia.png" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">Game list</h5>
+            <p class="card-text"><br>Article #8</p>
+          </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+          <a href="/articles">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/demon-slayer.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">Demon Slayer</h5>
+            <p class="card-text"><br>Article #7</p>
+          </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+          <a href="/articles/vinland-saga">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/vinland-saga.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Vinland Saga</h5>
+              <p class="card-text"><br>Article #6</p>
+            </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+            <a href="/articles/write-your-own-rules">
+              <div class="atest moverimg">
+                <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+                <img class="card-img-top" src="static/24-rules.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Write your own rules</h5>
+                <p class="card-text"><br>Article #5</p>
+              </div>
+            </a>
+          </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="album py-5">
+    <div class="container">
+      <div class="card-deck">
+        <div class="card text-center mover">
+          <a href="/articles/seneca">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/seneca.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Seneca</h5>
+              <p class="card-text"><br>Article #4</p>
+            </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+          <a href="/articles/psychological-types">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/jung-mandala.jpeg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Psychological Types</h5>
+              <p class="card-text"><br>Article #3</p>
+            </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+          <a href="/articles/jordan-peterson-carl-jung">
+            <div class="atest moverimg">
+              <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>
+              <img class="card-img-top" src="static/jung.webp" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Jordan Peterson as a bridge to understanding Carl Jung</h5>
+            </div>
+          </a>
+        </div>
+        <div class="card text-center mover">
+            <a href="/articles/fishing-in-stardew-valley">
+              <div class="atest moverimg">
+                <svg class="card-img-top svg-box" width="100" height="225"><rect width="450" height="225"/></svg>  
+                <img class="card-img-top" src="static/sdv-fishing.jpg" width="100" height="225" alt="" style="position: absolute; top: 0; left: 0;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Fishing in Stardew Valley</h5>
+                <p class="card-text">Article #1</p>
+              </div>
+            </a>
+          </div>  
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+  
+    count = document.getElementsByClassName('moverimg').length;  
+
+    for (let i = 0; i < count; i++) {
+
+
+      document.getElementsByClassName("moverimg")[i].onmouseover = function() {mouseOverImage()};
+
+      document.getElementsByClassName("moverimg")[i].onmouseout = function() {mouseOutImage()};
+
+
+      function mouseOverImage() {
+        document.getElementsByClassName("mover")[i].style.color = "black";
+      }
+
+      function mouseOutImage() {
+        document.getElementsByClassName("mover")[i].style.color = "";
+      }
+    }
+
+  </script>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}<html>
+{% block title %}About | Erik Rahem{% endblock %}
+{% block style %}
+    .circleimg {
+        clip-path: circle(25% at 50%);
+        width: 25%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .modal.fade .modal-dialog {
+        transform: translate3d(0, 0, 0);
+      }
+
+    .wrd {
+        width: 25%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        text-align: center;
+        margin: auto;
+        white-space: pre-wrap;
+    }
+
+    span {
+        background-color: black;
+        transition: .5s;
+    }
+
+    span:hover {
+        color: white;
+    }
+
+{% endblock %}
+{% block content %}
+<img class="circleimg" id="spaceHeight" src="" alt="Selfie" data-toggle="modal" data-target="#modalSelfie">
+<div class ="wrd">
+<span>
+Hello, I am Erik Rahem, a self-learning programming student. Videos coming soon.
+
+<a href="https://www.youtube.com/channel/UCWiL-to3Mv3ymoKi3YLfTbQ" target="_blank">Link to my YouTube channel</a>
+</span>
+</div>
+<!-- Modal Pixel art-->
+<div class="modal fade" id="modalSelfie" tabindex="-1" role="dialog" aria-labelledby="modalSelfieLabel" aria-hidden="true" style="text-align: center;">
+    <img src="static/selfie.jpg" style="width:50%;height:auto;">
+    <div class="modal-dialog">
+    </div>
+</div>
+    
+{% endblock %}

@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="../static/jquery-3.6.0.js"></script>
+
+        <title>{% block title %}{% endblock %}</title>
+        
+        <style>
+            .site {
+                color: white;
+                position: relative;
+
+            }
+            .pbody {
+              width: 50%;
+              overflow-wrap: break-word;
+              word-wrap: break-word;
+              word-break: break-word;
+              margin: auto;
+              white-space: pre-wrap;
+          }
+      
+            .topnav {
+                overflow: hidden;
+                background-color: black;
+                border: 1px solid #0080FF;
+              }
+
+              .topnav a {
+                float: left;
+                color: #0080FF;
+                text-align: center;
+                padding: 12px 14px;
+                text-decoration: none;
+                font-size: 18px;
+                transition: .5s;
+              }
+
+              .topnav a:hover {
+                background-color: #0080FF;
+                color: white; 
+              }
+              
+              .topnav a.active {
+                background-color: #0080FF;
+                color: black;
+              }          
+
+              .topnav a.active:hover {
+                background-color: #0080FF;
+                color: white;
+              } 
+    
+              .copyright {
+                color:grey;
+                background-color: black;
+                margin-top:auto; 
+              }
+
+              span {
+                color: white;
+                background-color: black;
+              }
+
+              body {
+              }
+
+              canvas{
+                width: 100%;
+              }
+
+            {% block style %}
+            {% endblock %}
+        </style>
+    </head>
+    <body>
+      <div id="site" class="site">
+      <script defer src="../static/activePage.js"></script>
+      <div class="topnav">
+          <a href="../">Home</a>
+          <a href="../articles">Articles</a>
+          <a href="../reviews">Reviews</a>
+          <a href="../apps">Apps</a>
+          <a href="../games">Games</a>
+          <a href="../about">About</a>
+      </div>
+        {% block content %}
+        {% endblock %}
+
+<div class="p-3">
+<span style="background-color:black; color:grey;">
+© 2022 Copyright:
+Erik Rahem
+</span>
+</div>
+
+    </div>
+
+      <canvas id="cnv" style="position: absolute; left: 0; top: 0; z-index: -1;"></canvas>
+
+<script>
+imageHeights = 0
+count = document.querySelectorAll("#spaceHeight").length; 
+var image = [];
+
+for (var i = 0; i < count; i++) {
+image[i] = document.querySelectorAll("#spaceHeight")[i].clientHeight;
+console.log(image[i])
+imageHeights += image[i]
+}
+
+//Get context and screen size;
+var ctx = cnv.getContext("2d");
+var W = $(document).width();
+var H = $(document).height() + 0;
+
+//Set Canvas and Background Color;
+cnv.width = W;
+cnv.height = H;
+ctx.fillStyle = "black";
+ctx.fillRect(0, 0, W, H);
+
+//Glow effect;
+ctx.shadowBlur = 10;
+ctx.shadowColor = "#0080FF";
+
+function animate() {
+
+//Random position and size of stars;
+let x = W * Math.random();
+let y = H * Math.random();
+let r = 2.5 * Math.random();
+
+//Draw the stars;
+ctx.beginPath();
+ctx.fillStyle = "#0080FF";
+ctx.arc(x, y, r, 0, Math.PI * 2);
+ctx.fill();
+
+//Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
+setTimeout(animate, 100);
+}
+animate()
+</script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
